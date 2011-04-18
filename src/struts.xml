@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.devMode" value="true" />
+	<package name="basicstruts2" extends="struts-default">
+		<result-types>
+			<result-type name="tiles" class="org.apache.struts2.views.tiles.TilesResult" /> 
+		</result-types>
+		<action name="home_action">
+			<result type="tiles">home_tiles</result>
+		</action>
+		<action name="register_action" class="edu.jhu.efoodcourt.struts.action.Register"
+			method="execute">
+			<result name="success" type="tiles">completeRegistration_tiles</result>
+			<result name="input" type="tiles">register_tiles</result>
+		</action>
+		<action name="login_action" class="edu.jhu.efoodcourt.struts.action.Login"  method="execute">
+			<result name="success" type="tiles">welcomeLogin_tiles</result> 
+			<result name="error" type="tiles">login_tiles</result>
+		</action>
+		<action name="requestDispatcher_action" class="edu.jhu.efoodcourt.struts.action.RequestDispatcher"  method="execute">
+			<result name="gotoTiles" type="tiles">${nextTiles}</result> 
+		</action>
+	</package>
+</struts>
+
+
