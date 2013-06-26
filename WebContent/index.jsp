@@ -5,7 +5,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Basic Struts 2 Application - Welcome in test mode</title>
+<title>Basic Struts 2 Application - Welcome in test2 mode</title>
 </head>
 <body>
 
